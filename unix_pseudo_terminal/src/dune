@@ -4,4 +4,4 @@
  (preprocess (pps ppx_jane)))
 
 (rule (targets config_ext.h) (deps (:first_dep discover.sh))
- (action (bash "./%{first_dep} config_ext.h %{lib:jst-config:config.h}")))
+ (action (bash "./%{first_dep} config_ext.h '%{lib:jst-config:config.h}'")))
